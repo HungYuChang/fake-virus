@@ -11,16 +11,17 @@
       font-family: Arial, sans-serif;
       text-align: center;
       overflow: hidden;
+      height: 100vh;
+      position: relative;
     }
     .center {
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 100px;
-      font-weight: bold;
-      /* 預設空白 */
-      color: white;
+      max-width: 90vw;
+      width: 1000px;
+      height: auto;
     }
     .exit {
       position: absolute;
@@ -37,22 +38,13 @@
   </style>
 </head>
 <body>
-  <div class="center" id="warning"></div>
-  <button class="exit" id="btn">解除病毒</button>
+  <!-- 用圖片替代文字 -->
+  <img class="center" src="https://i.imgur.com/G1X5uB0.png" alt="警告訊息" />
+
+  <button class="exit" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">解除病毒</button>
+
   <audio autoplay loop>
-    <source src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3" type="audio/mp3">
+    <source src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3" type="audio/mp3" />
   </audio>
-
-  <script>
-    // 動態插入警告文字
-    document.getElementById('warning').textContent = "⚠️ 你的 iPhone 已被入侵！請勿關閉此頁面！";
-
-    // 動態插入按鈕文字並綁定事件
-    const btn = document.getElementById('btn');
-    btn.textContent = "解除病毒";
-    btn.onclick = () => {
-      location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-    };
-  </script>
 </body>
 </html>
