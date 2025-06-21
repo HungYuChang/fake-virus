@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>伙房重要資訊！</title>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background-color: red;
       color: white;
       font-family: Arial, sans-serif;
@@ -18,8 +17,10 @@
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 100px; /* 放大中間文字 */
+      font-size: 100px;
       font-weight: bold;
+      /* 預設空白 */
+      color: white;
     }
     .exit {
       position: absolute;
@@ -28,18 +29,30 @@
       background-color: black;
       color: white;
       border: none;
-      padding: 30px 60px; /* 放大按鈕整體大小 */
-      font-size: 40px; /* 放大按鈕字體 */
+      padding: 30px 60px;
+      font-size: 40px;
       border-radius: 20px;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="center">⚠️ 你的 iPhone 已被入侵！請勿關閉此頁面！</div>
-  <button class="exit" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">解除病毒</button>
+  <div class="center" id="warning"></div>
+  <button class="exit" id="btn">解除病毒</button>
   <audio autoplay loop>
     <source src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3" type="audio/mp3">
   </audio>
+
+  <script>
+    // 動態插入警告文字
+    document.getElementById('warning').textContent = "⚠️ 你的 iPhone 已被入侵！請勿關閉此頁面！";
+
+    // 動態插入按鈕文字並綁定事件
+    const btn = document.getElementById('btn');
+    btn.textContent = "解除病毒";
+    btn.onclick = () => {
+      location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    };
+  </script>
 </body>
 </html>
