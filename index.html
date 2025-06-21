@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>伙房重要資訊！</title>
   <style>
     html, body {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background-color: red;
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
       overflow: hidden;
-      height: 100vh;
-      position: relative;
     }
     .center {
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 90vw;
-      width: 1000px;
-      height: auto;
+      font-size: 100px; /* 放大中間文字 /
+      font-weight: bold;
     }
     .exit {
       position: absolute;
@@ -30,21 +28,18 @@
       background-color: black;
       color: white;
       border: none;
-      padding: 30px 60px;
-      font-size: 40px;
+      padding: 30px 60px; / 放大按鈕整體大小 /
+      font-size: 40px; / 放大按鈕字體 */
       border-radius: 20px;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <!-- 用圖片替代文字 -->
-  <img class="center" src="https://i.imgur.com/G1X5uB0.png" alt="警告訊息" />
-
+  <div class="center">⚠️ 你的 iPhone 已被入侵！請勿關閉此頁面！</div>
   <button class="exit" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">解除病毒</button>
-
   <audio autoplay loop>
-    <source src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3" type="audio/mp3" />
+    <source src="https://www.myinstants.com/media/sounds/windows-xp-error.mp3" type="audio/mp3">
   </audio>
 </body>
 </html>
